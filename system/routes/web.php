@@ -54,8 +54,11 @@ Route::post('admin/user' , [UserController::class, 'store']);
 Route::get('user/{user}' , [UserController::class, 'show']);
 Route::get('user/{user}/edit' , [UserController::class, 'edit']);
 Route::put('user/{user}' , [UserController::class, 'update']);
-Route::delete('puser{user}' , [UserController::class, 'destroy']);
+Route::delete('user{user}' , [UserController::class, 'destroy']);
 
+Route::get('admin/login' , [AuthController::class, 'showAdminLogin']);
+Route::post('admin/login' , [AuthController::class, 'loginProcess']);
+Route::get('admin/logout' , [AuthController::class, 'logout']);
 
 
 

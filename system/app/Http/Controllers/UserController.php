@@ -13,40 +13,38 @@ class UserController extends Controller {
 		return view('admin/user.create');
 	}
 	function store(){
-		$produk = new User;
-		$produk->nama = request ('nama');
-		$produk->harga = request ('harga');
-		$produk->berat = request ('berat');
-		$produk->stok = request ('stok');
-		$produk->deskripsi = request ('deskripsi');
-		$produk->save();
+		$user = new User;
+		$user->nama = request ('nama');
+		$user->username = request ('username');
+		$user->email = request ('email');
+		$user->password = bcrypt(request ('password'));
+		$user->save();
 
-		return redirect('admin/produk')->with('success', 'Data Berhasil Ditambahkan');
+		return redirect('admin/user')->with('success', 'Data Berhasil Ditambahkan');
 	}
-	function show(User $produk){
-		$data['produk'] = $produk; 
-		return view ('admin/produk.show', $data);	
+	function show(User $user){
+		$data['user'] = $user; 
+		return view ('admin/user.show', $data);	
 		
 	}
-	function edit(User $produk){
-		$data['produk'] = $produk;
-		return view ('admin/produk.edit', $data);
+	function edit(User $user){
+		$data['user'] = $user;
+		return view ('admin/user.edit', $data);
 		
 	}
-	function update(User $produk){ 
-		$produk->nama = request ('nama');
-		$produk->harga = request ('harga');
-		$produk->berat = request ('berat');
-		$produk->stok = request ('stok');
-		$produk->deskripsi = request ('deskripsi');
-		$produk->save();
+	function update(User $user){
+		$user->nama = request ('nama');
+		$user->username = request ('username');
+		$user->email = request ('email');
+		if(request('password')) $user->password = bcrypt(request ('password'));
+		$user->save();
 
-		return redirect('admin/produk')->with('success', 'Data Berhasil Diedit');;
+		return redirect('admin/user')->with('success', 'Data Berhasil Diedit');;
 	}
 
-	function destroy(User $produk){
-		$produk->delete();
-		return redirect('admin/produk')->with('danger', 'Data Berhasil Dihapus');
+	function destroy(User $user){
+		$user->delete();
+		return redirect('admin/user')->with('danger', 'Data Berhasil Dihapus');
 	}
 
 }

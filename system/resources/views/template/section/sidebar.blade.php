@@ -20,7 +20,13 @@
           <img src="{{url('public')}}/dist/img/ppp.jpeg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Anggi Junita</a>
+          <a href="#" class="d-block">
+            @if(Auth::check())
+            {{request()->user()->nama}}
+            @else
+             Silahkan Login
+            @endif
+          </a>
         </div>
       </div>
 
@@ -46,19 +52,18 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{ url('admin/
-            user') }}" class="nav-link {{checkRouteActive('admin/user')}}">
-              <i class="nav-icon fas fa-archive"></i>
-              <p>
-                User
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
             <a href="{{ url('/admin/produk') }}" class="nav-link {{checkRouteActive('admin/produk')}}">
               <i class="nav-icon fas fa-archive"></i>
               <p>
                 Produk
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ url('admin/user') }}" class="nav-link {{checkRouteActive('admin/user')}}">
+              <i class="nav-icon fas fa-user"></i>
+              <p>
+                User
               </p>
             </a>
           </li>
@@ -72,7 +77,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{ url('admin/login') }}" class="nav-link {{checkRouteActive('login')}}">
+                <a href="{{ url('/admin/login') }}" class="nav-link {{checkRouteActive('login')}}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Login</p>
                 </a>

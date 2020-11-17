@@ -14,7 +14,7 @@ class ProdukController extends Controller {
 	}
 	function store(){
 		$produk = new Produk;
-		$produk->nama = request ('nama'); 
+		$produk->nama = request ('nama');
 		$produk->harga = request ('harga');
 		$produk->berat = request ('berat');
 		$produk->stok = request ('stok');

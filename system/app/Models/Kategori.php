@@ -1,7 +1,7 @@
-<?php
+<?php 
 
 namespace App\Models;
 
-class kategori extends Model {
-	protected $table = 'kategori';
-}
+ class Kategori extends Model{
+ 	protected $table = 'kategori';
+ }

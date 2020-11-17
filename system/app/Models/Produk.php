@@ -2,6 +2,6 @@
 
 namespace App\Models;
 
-class produk extends Model{
-	protected $table = 'produk';
-}
+ class Produk extends Model{
+ 	protected $table = 'produk';
+ }
