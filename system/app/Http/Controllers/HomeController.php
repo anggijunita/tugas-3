@@ -6,7 +6,7 @@ class HomeController extends Controller
 {
 
 	function showHome(){
-		return view('home');
+		return view('index');
 	}
 
 	function showProduk(){

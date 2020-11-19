@@ -1,185 +1,157 @@
-@extends('template.base')
+<!DOCTYPE html>
+<html lang="en">
 
-@section('content')
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-<div class="card my-3">
-	<div class="container">
-		<h4>Halaman Produk</h4>
-	</div>
-  <div class="card-body">
-    <div class="container">
-    	<div class="col-12">
-    		<div class="row row-cols-1 row-cols-md-3">
+  <title>Produk</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
 
-<!-- Daftar produk ( Bisa di hapus dari sini) -->
-			  <div class="col mb-4">
-			    <div class="card h-100">
-			      <img src="{{url('public/img/suzuki1.jpg')}}" class="img-thumbnail card-img-top" alt="...">
-			      <div class="card-body">
-			        <h5 class="card-title">Mobil Suzuki Ertiga GA</h5>
-			        <p class="card-text">Mobil keluarga yang satu ini cukup laris manis, namun penjualannya masih jauh dibawah Xenia, Avanza, dan Xpander.</p>
-			        <p class="text-danger">Rp 193.000.000</p>
-			        <button class="btn btn-primary">Pesan</button>
-			      </div>
-			    </div>
-			  </div>
-<!-- sampai disini -->
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-<!-- Daftar produk ( Bisa di hapus dari sini) -->
-			  <div class="col mb-4">
-			    <div class="card h-100">
-			      <img src="{{url('public/img/suzuki2.jpg')}}" class="img-thumbnail card-img-top" alt="...">
-			      <div class="card-body">
-			        <h5 class="card-title">Mobil Suzuki Karimun Wagon R GA</h5>
-			        <p class="card-text">Karimun Wagon R adalah mobil LCGC (Low Cost Green Car andalan Suzuki.</p>
-			         <p class="text-danger">Rp 110.000.000</p>
-			        <button class="btn btn-primary">Pesan</button>
-			      </div>
-			    </div>
-			  </div>
-<!-- sampai disini -->
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-<!-- Daftar produk ( Bisa di hapus dari sini) -->
-			  <div class="col mb-4">
-			    <div class="card h-100">
-			      <img src="{{url('public/img/suzuki3.jpg')}}" class="img-thumbnail card-img-top" alt="...">
-			      <div class="card-body">
-			        <h5 class="card-title">Mobil Suzuki APC Arena Blind Van</h5>
-			        <p class="card-text">Suzuki hanya menyediakan satu jenis transmisi, yaitu manual. Sedangkan untuk jantung pacunya ditenagai mesin 1.493 cc dengan tenaga 94.5 PS dan torsi 126 Nm.</p>
-			        <p class="text-danger">Rp 147.000.000</p>
-			        <button class="btn btn-primary">Pesan</button>
-			      </div>
-			    </div>
-			  </div>
-<!-- sampai disini -->
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
 
-<!-- Daftar produk ( Bisa di hapus dari sini) -->
-			  <div class="col mb-4">
-			    <div class="card h-100">
-			      <img src="{{url('public/img/honda1.jpg')}}" class="img-thumbnail card-img-top" alt="...">
-			      <div class="card-body">
-			        <h5 class="card-title">MObil Honda Brio S M/T</h5>
-			        <p class="card-text">Inilah mobil Honda termurah di Indonesia. Harga mobil ini dibanderol mulai Rp. 139 Jutaan.</p>
-			        <p class="text-danger">Rp. 139.000.000</p>
-			        <button class="btn btn-primary">Pesan</button>
-			      </div>
-			    </div>
-			  </div>
-<!-- sampai disini -->
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
 
-<!-- Daftar produk ( Bisa di hapus dari sini) -->
-			  <div class="col mb-4">
-			    <div class="card h-100">
-			      <img src="{{url('public/img/honda2.jpg')}}" class="img-thumbnail card-img-top" alt="...">
-			      <div class="card-body">
-			        <h5 class="card-title">Mobil Honda Brio RS M/T</h5>
-			        <p class="card-text"> Honda sudah melengkapinya dengan Side Skir, Tailgate Spoiler dengan LED Mount Stop Lamp, dan bumpe belakang yang dilengkapi diffuser.</p>
-			        <p class="text-danger">Rp. 175.000.000</p>
-			        <button class="btn btn-primary">Pesan</button>
-			      </div>
-			    </div>
-			  </div>
-<!-- sampai disini -->
+  <!-- =======================================================
+  * Template Name: Baker - v2.1.0
+  * Template URL: https://bootstrapmade.com/baker-free-onepage-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
 
-<!-- Daftar produk ( Bisa di hapus dari sini) -->
-			  <div class="col mb-4">
-			    <div class="card h-100">
-			      <img src="{{url('public/img/honda3.jpg')}}" class="img-thumbnail card-img-top" alt="...">
-			      <div class="card-body">
-			        <h5 class="card-title">Mobil Honda Jazz M/T</h5>
-			        <p class="card-text">Sebagai salah satu City Car terbaik di Indonesia, Honda Jazz menawarkan performa mesin bertenaga yang ditenagai mesin 1.5 Liter 4 Silinder segaris yang mampu mengeluarkan tenaga sebesar 120 PS dan torsi 145 Nm. </p>
-			        <p class="text-danger">Rp. 236.000.000</p>
-			        <button class="btn btn-primary">Pesan</button>
-			      </div>
-			    </div>
-			  </div>
-<!-- sampai disini -->
+<body>
+   <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top bg-dark">
+    <div class="container d-flex align-items-center">
 
-<!-- Daftar produk ( Bisa di hapus dari sini) -->
-			  <div class="col mb-4">
-			    <div class="card h-100">
-			      <img src="{{url('public/img/toyota1.jpg')}}" class="img-thumbnail card-img-top" alt="...">
-			      <div class="card-body">
-			        <h5 class="card-title">Mobil Toyota All New Rush G</h5>
-			        <p class="card-text">Harga mobil Toyota ini dibanderol mulai Rp. 242 Jutaan dan sudah dilengkapi ruang kabin yang lega dengan tiga baris kursi untuk menampung 7-8 penumpang.</p>
-			        <p class="text-danger">Rp. 242.150.000</p>
-			        <button class="btn btn-primary">Pesan</button>
-			      </div>
-			    </div>
-			  </div>
-<!-- sampai disini -->
+      <h1 class="logo mr-auto"><a href="index.html">Jual  Mobil Online</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <nav class="nav-menu d-none d-lg-block ">
+        <ul>
+          <li class=><a href="{{ url('/index') }}">Home</a></li>
+          <li><a href="{{ url('/recomended') }}">Produk</a></li>
+          <li><a href="{{ url('/login') }}">Login</a></li>
+          <li><a href="{{ url('/kategori') }}">kategori</a></li>
+ 
+        </ul>
+      </nav><!-- .nav-menu -->
 
-<!-- Daftar produk ( Bisa di hapus dari sini) -->
-			  <div class="col mb-4">
-			    <div class="card h-100">
-			      <img src="{{url('public/img/toyota2.jpg')}}" class="img-thumbnail card-img-top" alt="...">
-			      <div class="card-body">
-			        <h5 class="card-title">Mobil Toyota Fortuner 2.4 G Diesel (4×2)</h5>
-			        <p class="card-text">Walaupun harga mobil Toyotav Fortuner sangat mahal, namun mobil ini laris manis diburu konsumen kelas menengah ke atas.</p>
-			         <p class="text-danger">Rp. 471.850.000 </p>
-			        <button class="btn btn-primary">Pesan</button>
-			      </div>
-			    </div>
-			  </div>
-<!-- sampai disini -->
-
-<!-- Daftar produk ( Bisa di hapus dari sini) -->
-			  <div class="col mb-4">
-			    <div class="card h-100">
-			      <img src="{{url('public/img/toyota3.jpg')}}" class="img-thumbnail card-img-top" alt="...">
-			      <div class="card-body">
-			        <h5 class="card-title"> Mobil Toyota Toyota C-HR Single Tone</h5>
-			        <p class="card-text">Desain modern dengan lekukan body agresif dan futuristik menjadi salah satu kelebihan Toyota C-HR.</p>
-			        <p class="text-danger">Rp. 488.650.000</p>
-			        <button class="btn btn-primary">Pesan</button>
-			      </div>
-			    </div>
-			  </div>
-<!-- sampai disini -->
-<!-- Daftar produk ( Bisa di hapus dari sini) -->
-			  <div class="col mb-4">
-			    <div class="card h-100">
-			      <img src="{{url('public/img/nissan1.jpg')}}" class="img-thumbnail card-img-top" alt="...">
-			      <div class="card-body">
-			        <h5 class="card-title">Mobil Nissan Livina E</h5>
-			        <p class="card-text">All New Livina menggunakan basis yang sama dengan Mitsubishi Xpander. Oleh karena itulah keduanya memiliki performa yang sama dengan tenaga sebesar 104 PS dan torsi 141 Nm.</p>
-			        <p class="text-danger">Rp. 198.800.000</p>
-			        <button class="btn btn-primary">Pesan</button>
-			      </div>
-			    </div>
-			  </div>
-<!-- sampai disini --><!-- Daftar produk ( Bisa di hapus dari sini) -->
-			  <div class="col mb-4">
-			    <div class="card h-100">
-			      <img src="{{url('public/img/nissan2.jpg')}}" class="img-thumbnail card-img-top" alt="...">
-			      <div class="card-body">
-			        <h5 class="card-title">Mobil Nissan March 1.2L</h5>
-			        <p class="card-text">Nissan March menjadi mobil Nissan termurah di Indonesia.</p>
-			        <p class="text-danger">Rp. 185.800.000</p>
-			        <button class="btn btn-primary">Pesan</button>
-			      </div>
-			    </div>
-			  </div>
-<!-- sampai disini --><!-- Daftar produk ( Bisa di hapus dari sini) -->
-			  <div class="col mb-4">
-			    <div class="card h-100">
-			      <img src="{{url('public/img/nissan3.jpg')}}" class="img-thumbnail card-img-top" alt="...">
-			      <div class="card-body">
-			        <h5 class="card-title">Mobil Nissan Serena 2020 X</h5>
-			        <p class="card-text">Nissan Serena akan bersaing melawan Toyota Voxy. Mobil ini sangat mewah dan cocok bagi masbro yang mencari mobil keluarga. Di dalamnya tersedia 3 baris kursi yang dibuat senyaman mungkin untuk memanjakan semua penumpangnya.
-			        <p class="text-danger">Rp. 448.000.000</p>
-			        <button class="btn btn-primary">Pesan</button>
-			      </div>
-			    </div>
-			  </div>
-<!-- sampai disini -->
-			  
-
-			</div>
-    	</div>
     </div>
-  </div>
-</div>
+  </header><!-- End Header -->
+<!-- ======= Team Section ======= -->
+    <section id="team" class="team section-bg">
+      <div class="container">
 
+        <div class="section-title">
+          <h2>Recomended For You</h2>
+          <p>Kami disini merekomendasikan produk mobil terbaru yang sedang anda cari saat ini sesuai dengan kebutuhan dan keinginan anda.</p>
+        </div>
 
-@endsection
+       <div class="row">
+          <div class="col-md-3">
+            <div class="card">
+              <div class="card-header">
+                 Filter
+              </div>
+              <div class="col-md-12">
+                <form action="{{url('produk')}}" method="post"">
+                  @csrf
+                  <div class="form-group">
+                    <label for="" class="control-label">Nama</label>
+                    <input type="text" class="form-control" name="nama" value="{{$nama ?? ""}}">
+                  </div>
+                  <div class="form-group">
+                    <label for="" class="control-label">Stok</label>
+                    <input type="text" class="form-control" name="stok" value="{{$stok ?? ""}}">
+                  </div>
+                  <div class="form-group">
+                    <label for="" class="control-label">Harga Min</label>
+                    <input type="text" class="form-control" name="harga_min" value="{{$harga_min ?? ""}}">
+                  </div>
+                  <div class="form-group">
+                    <label for="" class="control-label">Harga Max </label>
+                    <input type="text" class="form-control" name="harga_max" value="{{$harga_max ?? ""}}">
+                  </div>
+                  <button class="btn btn-warning float-right"> <i class="fa fa-search"></i> Filter</button>
+                </form>
+              </div>
+            </div>
+          </div>">
+        	
+        	@foreach($list_produk as $produk)
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <div class="member-img">
+              	<a href="{{url('/detail')}}">
+                <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="member-info">
+                <h4>{{$produk->nama}} </h4>
+                <span>Rp {{number_format($produk->harga)}}</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          @endforeach
+    </section><!-- End Team Section -->
+
+    <!-- ======= Footer ======= -->
+    <div class="container d-md-flex py-4">
+
+      <div class="mr-md-auto text-center text-md-left">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Jual Mobil Online</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/baker-free-onepage-bootstrap-theme/ -->
+          Designed by <a>Anggi Junita</a>
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/counterup/counterup.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  </body>
+
+</html>

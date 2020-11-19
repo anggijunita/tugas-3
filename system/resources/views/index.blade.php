@@ -44,7 +44,7 @@
       <nav class="nav-menu d-none d-lg-block ">
         <ul>
           <li class=><a href="{{ url('/index') }}">Home</a></li>
-          <li><a href="{{ url('/rekomendasi') }}">Produk</a></li>
+          <li><a href="{{ url('/produk') }}">Produk</a></li>
           <li><a href="{{ url('/login') }}">Login</a></li>
           <li><a href="{{ url('/kategori') }}">Kategori</a></li>
         </ul>

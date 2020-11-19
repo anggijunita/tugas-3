@@ -6,6 +6,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ClientProdukController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -60,6 +61,12 @@ Route::get('admin/login' , [AuthController::class, 'showAdminLogin']);
 Route::post('admin/login' , [AuthController::class, 'loginProcess']);
 Route::get('admin/logout' , [AuthController::class, 'logout']);
 
+Route::get('index' , [ClientProdukController::class, 'showHome']);
+Route::get('produk' , [ClientProdukController::class, 'showProduk']);
+Route::get('kategori' , [ClientProdukController::class, 'showKategori']);
+Route::get('detail' , [ClientProdukController::class, 'showDetail']);
 
+Route::post('admin/produk/filter' , [ProdukController::class, 'filter']);
+Route::post('produk' , [ClientProdukController::class, 'clientfilter']);
 
 
