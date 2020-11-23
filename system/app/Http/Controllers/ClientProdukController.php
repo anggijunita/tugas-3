@@ -13,9 +13,9 @@ use App\Models\Kategori;
 class ClientProdukController extends Controller
 {
 	
-	function showHome(){
+	function showIndex(){
 		$data['list_produk'] = Produk::all();
-		return view('index', $data);
+		return view('home', $data);
 	}
 
 	function showProduk(){
@@ -33,13 +33,16 @@ class ClientProdukController extends Controller
 		return view('kategori', $data);
 	}
 
+
+
+
 	function clientfilter(){
 		$nama = request('nama');
 		$stok = explode(",", request('stok'));
 		$data['harga_min'] = $harga_min = request('harga_min');
 		$data['harga_max'] = $harga_max = request('harga_max');
-		//$data['list_produk'] = Produk::where('nama', 'like', "$nama%")->get();
-		$data['list_produk'] = Produk::whereIn('stok', $stok)->get();
+		$data['list_produk'] = Produk::where('nama', 'like', "$nama%")->get();
+		//$data['list_produk'] = Produk::whereIn('stok', $stok)->get();
 		//$data['list_produk'] = Produk::whereBetween('harga', [$harga_min, $harga_max])->get();
 		//$data['list_produk'] = Produk::where('stok', '<>', $stok)->get();
 

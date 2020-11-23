@@ -1,4 +1,4 @@
-@extends('template.base')
+extends('template.base')
 
 @section('content')
 	<div class="container">
@@ -28,6 +28,10 @@
 						<div class="form-group">
 							<label for="" class="control-label"> Password </label>
 							<input type="password" class="form-control" name="password">
+						</div>
+						<div class="form-group">
+							<label for="" class="control-label"> No Hp </label>
+							<input type="text" class="form-control" name="no_handphone">
 						</div>
 						<button class="btn btn-dark float-right"><i class="fa fa-save"></i>Simpan</button>
 						</form>
