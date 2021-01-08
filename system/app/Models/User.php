@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Models;
-	
 use App\Models\UserDetail;
 use App\Models\Produk;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -11,7 +10,7 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
-    protected $table= 'user';
+    protected $table = 'user';
     use HasFactory, Notifiable;
 
     function detail(){
@@ -20,5 +19,13 @@ class User extends Authenticatable
 
     function produk(){
     	return $this->hasMany(Produk::class, 'id_user');
+    }
+
+    function getJenisKelaminStringAttribute(){
+    	return ($this->jenis_kelamin == 1) ? "Laki-Laki" : "Perempuan";
+    }
+
+    function setPasswordAttribute($value){
+    	$this->attributes['password'] = bcrypt($value);
     }
 }

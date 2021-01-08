@@ -6,11 +6,20 @@
 			<div class="col-md-12 mt-5">
 				<div class="card">
 					<div class="card-header">
-						Detail Data Kategori
+						Detail Data Produk
 					</div>
 					<div class="card-body">
-						<h2>{{$kategori->nama}}</h2>
+						<h2>{{$produk->nama}}</h2>
 						<hr>
+						<p>
+							Rp. {{number_format($produk->harga)}}  |
+							Stok. {{$produk->stok}}  |
+							Berat {{$produk->berat}} gr |
+							Tanggal Produksi  {{$produk->created_at->diffForHumans()}}
+						</p>
+						<p>
+							{!! nl2br($produk->deskripsi) !!}
+						</p>
 					</div>
 				</div>
 			</div>

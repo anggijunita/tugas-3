@@ -1,13 +1,12 @@
 <?php 
 
 namespace App\Http\Controllers;
-use\App\Models\User;
-use\App\Models\UserDetail;
+use App\Models\User;
+use App\Models\UserDetail;
 
 class UserController extends Controller {
 	function index(){
 		$data['list_user'] = User::withCount('produk')->get();
-		//$data['list_user'] = User::has('produk')->get();
 		return view('admin/user.index', $data);
 	}
 
@@ -19,7 +18,8 @@ class UserController extends Controller {
 		$user->nama = request ('nama');
 		$user->username = request ('username');
 		$user->email = request ('email');
-		$user->password = bcrypt(request ('password'));
+		$user->password = request ('password');
+		$user->jenis_kelamin = 2;
 		$user->save();
 
 		$userDetail = new UserDetail;
@@ -31,7 +31,7 @@ class UserController extends Controller {
 	}
 	function show(User $user){
 		$data['user'] = $user; 
-		return view ('admin/user.show', $data);	
+		return view ('admin.user.show', $data);	
 		
 	}
 	function edit(User $user){
@@ -43,7 +43,7 @@ class UserController extends Controller {
 		$user->nama = request ('nama');
 		$user->username = request ('username');
 		$user->email = request ('email');
-		if(request('password')) $user->password = bcrypt(request ('password'));
+		if(request('password')) $user->password = request ('password');
 		$user->save();
 
 		return redirect('admin/user')->with('success', 'Data Berhasil Diedit');;

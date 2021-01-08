@@ -17,6 +17,7 @@
 								<th>Username</th>
 								<th>Nama</th>
 								<th>Produk</th>
+								<th>jenis kelamin</th>
 								<th>Email</th>
 							</thead>
 							<tbody>
@@ -33,6 +34,7 @@
 									<td>{{$user->username}}</td>
 									<td>{{$user->nama}}</td>
 									<td>{{$user->produk->count()}}</td>
+									<td>{{$user->jenis_kelamin_string}}</td>
 									<td>{{$user->email}}</td>
 									
 								</tr>
