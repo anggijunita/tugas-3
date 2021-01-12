@@ -1,11 +1,18 @@
 <?php 
 
 namespace App\Models;
+use App\Models\Traits\Attributes\ProdukAttributes;
+use App\Models\Traits\Relations\ProdukRelations;
 
  class Produk extends Model{
- 	protected $table = 'produk';
 
- 	 function seller(){
- 	 	return $this->belongsTo(User::class, 'id_user');
- 	 }
+	use ProdukAttributes, ProdukRelations;
+ 	
+ 	protected $table = 'produk';
+ 	//protected $dates = ['created_at'];
+ 	protected $casts = [
+ 		'created_at' => 'datetime',
+ 		'updated_at' => 'datetime',
+ 		'berat' => 'decimal:2'
+ 	];
  }

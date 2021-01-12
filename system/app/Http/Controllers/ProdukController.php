@@ -15,7 +15,6 @@ class ProdukController extends Controller {
 	}
 	function store(){
 		$produk = new Produk;
-		$produk->id_user = request()->user()->id;
 		$produk->nama = request ('nama');
 		$produk->harga = request ('harga');
 		$produk->berat = request ('berat');
@@ -40,6 +39,7 @@ class ProdukController extends Controller {
 	function update(Produk $produk){ 
 		$produk->nama = request ('nama');
 		$produk->harga = request ('harga');
+		$produk->foto = request ('foto');
 		$produk->berat = request ('berat');
 		$produk->stok = request ('stok');
 		$produk->deskripsi = request ('deskripsi');
@@ -60,8 +60,8 @@ class ProdukController extends Controller {
 		$stok = explode(",", request('stok'));
 		$data['harga_min'] = $harga_min = request('harga_min');
 		$data['harga_max'] = $harga_max = request('harga_max');
-		//$data['list_produk'] = Produk::where('nama', 'like', "$nama%")->get();
-		$data['list_produk'] = Produk::whereIn('stok', $stok)->get();
+		$data['list_produk'] = Produk::where('nama', 'like', "$nama%")->get();
+		//$data['list_produk'] = Produk::whereIn('stok', $stok)->get();
 		//$data['list_produk'] = Produk::whereBetween('harga', [$harga_min, $harga_max])->get();
 		//$data['list_produk'] = Produk::where('stok', '<>', $stok)->get();
 

@@ -21,11 +21,7 @@
         </div>
         <div class="info">
           <a href="#" class="d-block">
-            @if(Auth::check())
-            {{request()->user()->nama}}
-            @else
-             Silahkan Login
-            @endif
+           Anggi Junita
           </a>
         </div>
       </div>

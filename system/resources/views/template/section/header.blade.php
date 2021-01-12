@@ -22,11 +22,7 @@
       <!-- Messages Dropdown Menu -->
       <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#"> 
-          @if(Auth::check())
-            {{request()->user()->nama}}
-            @else
-             Silahkan Login
-            @endif
+            Anggi junita
           <img src="{{ url ('public')}}/dist/img/ppp.jpeg" class="img-circle elevation-2" style="height: 100%" alt="User Image">
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
