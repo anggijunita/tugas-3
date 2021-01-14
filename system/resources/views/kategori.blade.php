@@ -1,68 +1,102 @@
-@extends('template.base')
+<!DOCTYPE html>
+<html lang="en">
 
-@section('content')
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-<div class="card my-3">
-	<div class="container">
-		<h4>Halaman Produk</h4>
-	</div>
-  <div class="card-body">
-    <div class="container">
-    	<div class="col-12">
-    		<div class="row">
+  <title>Jual Mobil Online</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+   <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top bg-dark">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo mr-auto"><a href="index.html">Jual Mobil Online</a></h1>
+      <nav class="nav-menu d-none d-lg-block ">
+        <ul>
+         <li class=><a href="{{ url('/home') }}">Home</a></li>
+          <li><a href="{{ url('/produk') }}">Produk</a></li>
+          <li><a href="{{ url('/kategori') }}">Kategori</a></li>
+          <li><a href="{{ url('/login') }}">Login</a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
+<!-- ======= Team Section ======= -->
+    <section id="team" class="team section-bg">
+      <div class="container">
+        <div class="section-title">
+          <h2>Kategori Yang Tersedia</h2>
+          <p>Kami Juga Menyediakan Beberapa kategori Mobil Yang Kami Rekomendasikan kepada anda.</p>
+        </div>
 
 <!-- Daftar kategori ( Bisa di hapus dari sini) -->
-			  <div class="col-sm-6">
-			    <div class="card">
-			      <div class="card-body">
-			        <h5 class="card-title text-primary">Suzuki</h5>
-			        <p class="card-text text-muted"> Disini kami menyediakan Mobil Suzuki dengan berbagai variasi sesuai dengan yang diperlukan oleh pelanggan kami.</p>
-			        <a href="{{url('admin/produk')}}" class="btn btn-primary">Lebih Banyak Barang</a>
-			      </div>
-			    </div>
-			  </div>
+@foreach($list_kategori as $kategori)
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title text-primary">{{$kategori->nama}}</h5>
+              <p class="card-text text-muted">{{$kategori->nama}}</p>
+              <a href="{{url('admin/produk')}}" class="btn btn-primary">Lebih Banyak Barang</a>
+            </div>
+          </div>
+        </div>
+        @endforeach
 <!-- sampai sini -->
-
-<!-- Daftar kategori ( Bisa di hapus dari sini) -->
-			  <div class="col-sm-6">
-			    <div class="card">
-			      <div class="card-body">
-			        <h5 class="card-title text-primary">Honda </h5>
-			        <p class="card-text text-muted">Mobil Honda Brio merupakan produk parbikan Honda yang memiliki tingkat penjualan tertinggi. Oleh karena itu mobil Honda Brio dapat menempati 10 mobil terlaris di Indonesia pada semester pertama 2018.</p>
-			        <a href="{{url('admin/produk')}}" class="btn btn-primary">Lebih Banyak Barang</a>
-			      </div>
-			    </div>
-			  </div>
-<!-- sampai sini -->
-
-<!-- Daftar kategori ( Bisa di hapus dari sini) -->
-			  <div class="col-sm-6">
-			    <div class="card">
-			      <div class="card-body">
-			        <h5 class="card-title text-primary">Toyota</h5>
-			        <p class="card-text text-muted">Salah satu pabrikan mobil yang telah mengeluarkan berbagai kelas adalah Toyota. Yang paling diingat dari Toyota tentu adalah mobil Toyota Avanza yang menjadi primadona mobil kelas MPV. Ada pula mobil Toyota Alphard yang menjadi mobil premium di kelas MPV.</p>
-			        <a href="{{url('admin/produk')}}" class="btn btn-primary">Lebih Banyak Barang</a>
-			      </div>
-			    </div>
-			  </div>
-<!-- sampai sini -->
-
-<!-- Daftar kategori ( Bisa di hapus dari sini) -->
-			  <div class="col-sm-6">
-			    <div class="card">
-			      <div class="card-body">
-			        <h5 class="card-title text-primary">Nissan</h5>
-			        <p class="card-text text-muted">Kami juga menjual mobil bermerek Nissan dengan berbagai macam pilihan dengan warna yang menarik sesuai dengan minat pelanggan.</p>
-			        <a href="{{url('admin/produk')}}" class="btn btn-primary">Lebih Banyak Barang</a>
-			      </div>
-			    </div>
-			  </div>
-<!-- sampai sini -->
-
-			</div>
-    	</div>
+      </div>
+      </div>
     </div>
   </div>
 </div>
+    <!-- ======= Footer ======= -->
+    <div class="container d-md-flex py-4">
 
-@endsection
+      <div class="mr-md-auto text-center text-md-left">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Jual Mobil Online</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          Designed by <a>Anggi Junita</a>
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
+
+  <!-- Vendor JS Files -->
+   @include('section.js')
+  </body>
+
+</html>

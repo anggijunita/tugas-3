@@ -5,12 +5,11 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Produk</title>
+  <title>Jual Mobil Online</title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -26,12 +25,6 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Baker - v2.1.0
-  * Template URL: https://bootstrapmade.com/baker-free-onepage-bootstrap-theme/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -39,16 +32,13 @@
   <header id="header" class="fixed-top bg-dark">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="index.html">Jual  Mobil Online</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <h1 class="logo mr-auto"><a href="index.html">Jual Mobil Online</a></h1>
       <nav class="nav-menu d-none d-lg-block ">
         <ul>
-          <li class=><a href="{{ url('/index') }}">Home</a></li>
-          <li><a href="{{ url('/recomended') }}">Produk</a></li>
+         <li class=><a href="{{ url('/home') }}">Home</a></li>
+          <li><a href="{{ url('/produk') }}">Produk</a></li>
+          <li><a href="{{ url('/kategori') }}">Kategori</a></li>
           <li><a href="{{ url('/login') }}">Login</a></li>
-          <li><a href="{{ url('/kategori') }}">kategori</a></li>
- 
         </ul>
       </nav><!-- .nav-menu -->
 
@@ -57,13 +47,11 @@
 <!-- ======= Team Section ======= -->
     <section id="team" class="team section-bg">
       <div class="container">
-
         <div class="section-title">
-          <h2>Recomended For You</h2>
-          <p>Kami disini merekomendasikan produk mobil terbaru yang sedang anda cari saat ini sesuai dengan kebutuhan dan keinginan anda.</p>
+          <h2>Produk Yang Tersedia</h2>
+          <p>Kami Juga Menyediakan Beberapa Jenis Mobil Yang Kami Rekomendasikan Yang Mungkin Sesuai Kebutuhan Anda.</p>
         </div>
-
-       <div class="row">
+        <div class="row">
           <div class="col-md-3">
             <div class="card">
               <div class="card-header">
@@ -92,37 +80,38 @@
                 </form>
               </div>
             </div>
-          </div>">
-        	
-        	@foreach($list_produk as $produk)
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member">
-              <div class="member-img">
-              	<a href="{{url('/detail')}}">
-                <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+          </div>
+          @foreach($list as $item)
+           <div class="col-lg-3 col-md-3 mt-4 d-flex align-items-stretch">
+             <div class="member">
+                <div class="member-img">
+                    <a href="{{url('detail', $item->id)}}">
+                       <img src="{{url("public/$item->foto")}}" alt="" class="img-fluid">
+                    </div>
+                <div class="member-info">
+                    <h5>{{$item->nama}}</h5>
+                    <span>Rp {{number_format($item->harga)}}</span>
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div class="member-info">
-                <h4>{{$produk->nama}} </h4>
-                <span>Rp {{number_format($produk->harga)}}</span>
-                </a>
-              </div>
+          @endforeach
+        </div>
+        <div class="row">
+          <div class="col-md-12 mt-5">
+            <div class="float-right">
+              {{$list->links()}}
             </div>
           </div>
-          @endforeach
+       </div>
     </section><!-- End Team Section -->
-
     <!-- ======= Footer ======= -->
     <div class="container d-md-flex py-4">
-
       <div class="mr-md-auto text-center text-md-left">
         <div class="copyright">
           &copy; Copyright <strong><span>Jual Mobil Online</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/baker-free-onepage-bootstrap-theme/ -->
           Designed by <a>Anggi Junita</a>
         </div>
       </div>
@@ -135,9 +124,7 @@
       </div>
     </div>
   </footer><!-- End Footer -->
-
   <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
-
   <!-- Vendor JS Files -->
   <script src="assets/vendor/jquery/jquery.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -148,10 +135,12 @@
   <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/venobox/venobox.min.js"></script>
-
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script>
+  $(".table-datatable").DataTable();
+</script>
   </body>
-
+</html>
+  </body>
 </html>
