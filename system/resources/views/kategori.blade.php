@@ -46,12 +46,29 @@
 
     </div>
   </header><!-- End Header -->
+  <div class="card my-3">
+  <div class="container">
+    <h4>Halaman Produk</h4>
+  </div>
+  <div class="card-body">
+    <div class="container">
+      <div class="col-12">
+        <div class="row">
+
+          <div class="card my-3">
+  <div class="container">
+    <h4>Halaman Produk</h4>
+  </div>
+  <div class="card-body">
+    <div class="container">
+      <div class="col-12">
+        <div class="row">
 <!-- ======= Team Section ======= -->
     <section id="team" class="team section-bg">
       <div class="container">
         <div class="section-title">
           <h2>Kategori Yang Tersedia</h2>
-          <p>Kami Juga Menyediakan Beberapa kategori Mobil Yang Kami Rekomendasikan kepada anda.</p>
+          <p>Kami Juga Menyediakan Beberapa kategori Mobil yang terbaru dan terupdate saat ini dengan harga yang terjangkau</p>
         </div>
 
 <!-- Daftar kategori ( Bisa di hapus dari sini) -->

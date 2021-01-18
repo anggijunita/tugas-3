@@ -32,7 +32,7 @@
   <header id="header" class="fixed-top bg-dark">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="index.html">Jual Mobil Online</a></h1>
+      <h1 class="logo mr-auto"><a href="index.html">Beli Hp Kuyy</a></h1>
       <nav class="nav-menu d-none d-lg-block ">
         <ul>
          <li class=><a href="{{ url('/home') }}">Home</a></li>
@@ -49,7 +49,7 @@
       <div class="container">
         <div class="section-title">
           <h2>Produk Yang Tersedia</h2>
-          <p>Kami Juga Menyediakan Beberapa Jenis Mobil Yang Kami Rekomendasikan Yang Mungkin Sesuai Kebutuhan Anda.</p>
+          <p>Kami Juga Menyediakan Beberapa Jenis Mobil terbaru dan terlaris untuk saat ini dengan harga terjangkau</p>
         </div>
         <div class="row">
           <div class="col-md-3">
@@ -87,12 +87,16 @@
                 <div class="member-img">
                     <a href="{{url('detail', $item->id)}}">
                        <img src="{{url("public/$item->foto")}}" alt="" class="img-fluid">
-                    </div>
+                </div>
+                     </a>
                 <div class="member-info">
                     <h5>{{$item->nama}}</h5>
-                    <span>Rp {{number_format($item->harga)}}</span>
-                    </a>
-                  </div>
+                    <span>Rp. {{number_format($item->harga)}}</span>
+                    <p> Stok Barang :{{($item->stok)}}</p>
+               </div>
+               <div class="btn-group">
+                 <a href="{{url('test-ajax', $item->id)}}" class="" class="btn btn-dark"><i class="fa fa-info">Pesan Sekarang</i></a>
+               </div>
                 </div>
               </div>
           @endforeach
@@ -109,10 +113,10 @@
     <div class="container d-md-flex py-4">
       <div class="mr-md-auto text-center text-md-left">
         <div class="copyright">
-          &copy; Copyright <strong><span>Jual Mobil Online</span></strong>. All Rights Reserved
+          &copy; Copyright <strong><span>Beli Hp Kuyy</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-          Designed by <a>Anggi Junita</a>
+          Designed by <a>CindyRahmawati</a>
         </div>
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">

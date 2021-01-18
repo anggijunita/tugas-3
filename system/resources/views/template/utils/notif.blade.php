@@ -6,3 +6,4 @@
 		</div>
 	@endif
 @endforeach
+© 2021 GitHub, Inc.

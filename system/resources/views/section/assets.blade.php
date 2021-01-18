@@ -1,7 +1,7 @@
 <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Beli Hp Kuyy</title>
+  <title>Jual Mobil Online</title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
 
@@ -11,6 +11,7 @@
 
   <!-- Vendor CSS Files -->
   <link href="{{url('public')}}/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
   <link href="{{url('public')}}/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="{{url('public')}}/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">

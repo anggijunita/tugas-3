@@ -60,7 +60,7 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center justify-content-center">
     <div class="container position-relative">
-      <h1>JUal Mobil Online </h1>
+      <h1>Jual Mobil Online </h1>
       <h2>Salah satu tempat penjualan Mobil terpecaya dengan kualitas yang bagus</h2>
     </div>
   </section><!-- End Hero -->
